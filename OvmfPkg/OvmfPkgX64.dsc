@@ -794,6 +794,12 @@
   #OvmfPkg/QemuRamfbDxe/QemuRamfbDxe.inf
   #OvmfPkg/VirtioGpuDxe/VirtioGpu.inf
 
+  EmulatorPkg/EmuGopDxe/EmuGopDxe.inf {
+    <LibraryClasses>
+      BltLib|OptionRomPkg/Library/FrameBufferBltLib/FrameBufferBltLib.inf
+      PcdLib|MdePkg/Library/DxePcdLib/DxePcdLib.inf
+  }
+
   #
   # ISA Support
   #
