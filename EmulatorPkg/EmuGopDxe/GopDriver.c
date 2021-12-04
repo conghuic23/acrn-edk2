@@ -121,6 +121,16 @@ EmuGopDriverBindingSupported (
     PcdSet32S (PcdVideoVerticalResolution, Height);
   }
 
+  if (Pci.Hdr.VendorId == 0x1AF4 && Pci.Hdr.DeviceId == 0x1050 && IS_PCI_VGA(&Pci)) {
+    DEBUG((EFI_D_INFO, "virtio bhyve framebuffer device detected\n"));
+    Status = EFI_SUCCESS;
+
+    BhyveGetGraphicsMode(PciIo, &Width, &Height, &Depth);
+    PcdSet32S (PcdVideoHorizontalResolution, Width);
+    PcdSet32S (PcdVideoVerticalResolution, Height);
+
+  }
+
 Done:
   //
   // Close the PCI I/O Protocol
