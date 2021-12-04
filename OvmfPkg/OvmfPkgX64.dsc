@@ -748,7 +748,7 @@
 !endif
   }
   OvmfPkg/VirtioPciDeviceDxe/VirtioPciDeviceDxe.inf
-  #OvmfPkg/Virtio10Dxe/Virtio10.inf
+  OvmfPkg/Virtio10Dxe/Virtio10.inf
   OvmfPkg/VirtioBlkDxe/VirtioBlk.inf
   OvmfPkg/GvtGopDxe/GvtGopDxe.inf
   #OvmfPkg/VirtioScsiDxe/VirtioScsi.inf
@@ -792,7 +792,7 @@
 
   #OvmfPkg/QemuVideoDxe/QemuVideoDxe.inf
   #OvmfPkg/QemuRamfbDxe/QemuRamfbDxe.inf
-  #OvmfPkg/VirtioGpuDxe/VirtioGpu.inf
+  OvmfPkg/VirtioGpuDxe/VirtioGpu.inf
 
   EmulatorPkg/EmuGopDxe/EmuGopDxe.inf {
     <LibraryClasses>
